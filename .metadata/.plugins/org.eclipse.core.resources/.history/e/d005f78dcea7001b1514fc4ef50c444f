@@ -1,0 +1,10 @@
+package oopIntro;
+
+public class CourseManager {
+ 
+	public void AddStudent(Course course, Student student) {
+		System.out.println("%s %s isimli öğrenci %s kursuna katıldı.".format(student.name,student.surname,course.courseName));
+	}
+	
+	
+}

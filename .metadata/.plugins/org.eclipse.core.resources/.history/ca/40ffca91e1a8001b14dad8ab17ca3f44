@@ -1,0 +1,7 @@
+package odev2;
+
+public class InstructorManager extends UserManager{
+
+public void Add(Instructor instructor) {
+
+}

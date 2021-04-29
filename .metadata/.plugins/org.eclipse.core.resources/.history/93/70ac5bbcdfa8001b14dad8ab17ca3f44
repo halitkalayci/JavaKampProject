@@ -1,0 +1,7 @@
+package odev2;
+
+public class Instructor extends User{
+
+	private String[] courses;
+	private String biography;
+}

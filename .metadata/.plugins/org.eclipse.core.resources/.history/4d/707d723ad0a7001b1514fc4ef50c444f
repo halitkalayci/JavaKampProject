@@ -1,0 +1,16 @@
+package oopIntro;
+
+import java.util.Date;
+
+public class Comment {
+
+	public Comment(String comment, Student fromStudent, Date date) {
+	   this.comment = comment;
+	   this.fromStudent = fromStudent;
+	   this.date = date;
+	}
+	
+	String comment;
+	Student fromStudent;
+	Date date;
+}

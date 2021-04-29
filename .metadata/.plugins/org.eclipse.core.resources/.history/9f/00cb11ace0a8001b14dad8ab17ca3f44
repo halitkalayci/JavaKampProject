@@ -1,0 +1,14 @@
+package odev2;
+
+public class StudentManager extends UserManager {
+@Override
+public void Add(User user) {
+	// TODO Auto-generated method stub
+	super.Add(user);
+}
+@Override
+	public void Remove(User user) {
+		// TODO Auto-generated method stub
+		super.Remove(user);
+	}
+}

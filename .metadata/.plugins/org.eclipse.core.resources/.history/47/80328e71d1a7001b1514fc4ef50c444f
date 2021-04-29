@@ -1,0 +1,19 @@
+package oopIntro;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Course newCourse = new Course("React Native ile mobil uygulama kursu",new Teacher("Engin","Demiroğ"));
+		CourseManager courseManager = new CourseManager();
+		courseManager.Add(newCourse);
+		courseManager.AddStudent(newCourse, new Student("Halit Enes","Kalaycı"));
+		courseManager.AddComment(newCourse, new Comment("Harika ders!", new Student("Halit Enes","Kalaycı")));
+		
+		System.out.println("Kurslar listeleniyor :");
+		for(Course course : courseManager.GetAll()) {
+			System.out.println(course.courseName);
+		} 
+		
+	}
+
+}

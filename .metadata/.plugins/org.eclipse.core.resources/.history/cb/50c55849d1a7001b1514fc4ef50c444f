@@ -1,0 +1,37 @@
+package oopIntro;
+
+import java.util.Date;
+
+public class CourseManager {
+    
+	Student[] students = new Student[] {
+		new Student("Halit Enes","Kalaycý"),
+		new Student("Fýrat","Tercanlý"),
+		new Student("Engin","Toprak")
+	};
+	
+	Comment[] comments = new Comment[] {
+			new Comment("Muhteþem bir kurs!",students[0]),
+			new Comment("Harikasýnýz hocam.",students[1])
+	};
+	
+	Teacher teacher = new Teacher("Engin","Demiroð");
+	
+	public void AddStudent(Course course, Student student) {
+		System.out.println(String.format("%s %s isimli öðrenci %s kursuna kayýt oldu.",student.name,student.surname,course.courseName));
+	}
+	public void AddComment(Course course, Student student, Comment comment) {
+		System.out.println(String.format("%s isimli öðrenci %s kursuna yorum yaptý. Yorum : %s , Tarih : %s", student.name,course.courseName, comment.comment,comment.date.toString()));
+	}
+	public void Add(Course course) {
+	    System.out.println(String.format("%s kursu eklendi.", course.courseName));
+	}
+	public Course[] GetAll() {
+		return new Course[] {
+			new Course("Yazýlým Geliþtirici Yetiþtirme Kampý (C# + ANGULAR)", students, comments, teacher),
+			new Course("Yazýlým Geliþtirici Yetiþtirme Kampý (JAVA + REACT)", students, comments, teacher),
+			new Course("Programlamaya giriþ için temel kurs", students, comments, teacher),
+		};
+	}
+	
+}

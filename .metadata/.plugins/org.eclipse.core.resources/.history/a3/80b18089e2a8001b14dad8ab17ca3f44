@@ -1,0 +1,28 @@
+package odev2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		UserManager userManager = new UserManager();
+		User user = new User();
+		user.setId(1);
+		user.setAvatarPath("www.resimyolu.com");
+		user.setName("Halit Enes");
+		user.setSurname("Kalaycý");
+		userManager.Add(user);
+		userManager.Remove(user);
+		
+		UserManager instructorManager = new InstructorManager();
+		Instructor instructor = new Instructor();
+		instructor.setId(1);
+		instructor.setAvatarPath("www.resimyolu.com");
+		instructor.setBiography("MCT PMP VE ITIL.... :D :D");
+		instructor.setCourses(new String[]{"java","c#"});
+		instructor.setName("Engin");
+		instructor.setSurname("Demiroð");
+		instructorManager.Add(instructor);
+
+		
+	}
+
+}

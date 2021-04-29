@@ -1,0 +1,12 @@
+package odev2;
+
+public class StudentManager extends UserManager {
+	public void Add(Student student) {
+		  System.out.println("Student için iş kodları çalıştı : " + student.getName());
+		  super.Add(student);
+	  }
+	  public void Remove(Student student) {
+		  System.out.println("Student için iş kodları çalıştı : " + student.getName());
+		  super.Remove(student);
+	  }
+}
