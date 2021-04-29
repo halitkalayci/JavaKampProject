@@ -21,7 +21,6 @@ public class Main {
 		instructor.setName("Engin");
 		instructor.setSurname("Demiroğ");
 		instructorManager.Add(instructor);
-		instructorManager.Create(instructor, "Java");
 		instructorManager.Remove(instructor);
 
 		StudentManager studentManager = new StudentManager();
@@ -33,7 +32,6 @@ public class Main {
 		student.setName("Halit Enes");
 		student.setSurname("Kalaycı");
 		studentManager.Add(student);
-		studentManager.RegisterToCourse("Java", student);
 		studentManager.Remove(student);
 	}
 

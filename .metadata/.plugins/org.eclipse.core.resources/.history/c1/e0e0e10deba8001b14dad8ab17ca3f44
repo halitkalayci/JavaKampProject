@@ -9,7 +9,4 @@ public class InstructorManager extends UserManager{
 		  System.out.println("Instructor için iþ kodlarý çalýþtý : " + instructor.getName());
 		  super.Remove(instructor);
 	  }
-	  public void Create(Instructor instructor, String courseName) {
-		  System.out.println(instructor.getName() + " isimli öðretmen " + courseName + " isimli kursu oluþturdu.");
-	  }
 }

@@ -9,7 +9,4 @@ public class StudentManager extends UserManager {
 		  System.out.println("Student için iş kodları çalıştı : " + student.getName());
 		  super.Remove(student);
 	  }
-	  public void RegisterToCourse(String course, Student student) {
-		  System.out.println(student.getName() + " isimli öğrenci "+ course + " isimli kursa kayıt oldu.");
-	  }
 }
