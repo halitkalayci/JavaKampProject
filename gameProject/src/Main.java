@@ -19,8 +19,8 @@ public class Main {
 		Game game = new Game(1,"Call of Duty",250d);
 		Game game2 = new Game(2,"Age Of Empires",120d);
         Campaign campaign = new Campaign(1,"Kodlama.io kullanýcýlarýna özel %5 indirim",5);
-        Player validPlayer = new Player(1,"Sanchklyc","Halit Enes","Kalaycý", new Date(2000,6,28));
-        Player invalidPlayer = new Player(2,"engindemirog","Engin","Demiroð",new Date(2005,6,28));
+        Player validPlayer = new Player(1,"Sanchklyc","Halit Enes","Kalaycý", new Date(2000,6,28),"12345678901");
+        Player invalidPlayer = new Player(2,"engindemirog","Engin","Demiroð",new Date(2005,6,28),"5555555555");
         
         PlayerService playerService = new PlayerManager(new EDevletValidationService());
         playerService.add(validPlayer);

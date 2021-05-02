@@ -9,16 +9,18 @@ public class Player implements IEntity{
      String userName;
      String firstName;
      String lastName;
+     String tckn;
      Date dateOfBirth;
      public Player() {
 	}
-	public Player(int id, String userName, String firstName, String lastName, Date dateOfBirth) {
+	public Player(int id, String userName, String firstName, String lastName, Date dateOfBirth,String tckn) {
 		super();
 		this.id = id;
 		this.userName = userName;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
+		this.tckn = tckn;
 	}
 	public int getId() {
 		return id;
@@ -49,6 +51,12 @@ public class Player implements IEntity{
 	}
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+	public String getTckn() {
+		return tckn;
+	}
+	public void setTckn(String tckn) {
+		this.tckn = tckn;
 	}
      
 }
