@@ -2,4 +2,8 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="oopIntro.Course"/>
+    <fullyQualifiedTypeName name="odev2.UserManager"/>
+    <fullyQualifiedTypeName name="odev2.InstructorManager"/>
+    <fullyQualifiedTypeName name="odev2.StudentManager"/>
+    <fullyQualifiedTypeName name="odev2.Instructor"/>
 </qualifiedTypeNameHistroy>
