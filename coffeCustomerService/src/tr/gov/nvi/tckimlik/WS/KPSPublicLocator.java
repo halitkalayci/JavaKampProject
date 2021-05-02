@@ -6,7 +6,7 @@
  */
 
 package tr.gov.nvi.tckimlik.WS;
-import javax.xml.namespace.QName;
+
 public class KPSPublicLocator extends org.apache.axis.client.Service implements tr.gov.nvi.tckimlik.WS.KPSPublic {
 
     public KPSPublicLocator() {
@@ -17,7 +17,7 @@ public class KPSPublicLocator extends org.apache.axis.client.Service implements 
         super(config);
     }
 
-    public KPSPublicLocator(java.lang.String wsdlLoc, QName sName) throws javax.xml.rpc.ServiceException {
+    public KPSPublicLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
