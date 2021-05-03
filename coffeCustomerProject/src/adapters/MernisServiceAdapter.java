@@ -1,5 +1,6 @@
 package adapters;
 
+
 import java.rmi.RemoteException;
 
 import entities.Customer;
