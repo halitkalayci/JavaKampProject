@@ -1,4 +1,3 @@
-package coffeCustomerProject;
 
 import java.util.Date;
 
@@ -12,8 +11,8 @@ import interfaces.BaseCustomerManager;
 public class Main {
 
 	public static void main(String[] args) {
-		Customer realCustomer = new Customer(1,"Halit Enes","KalaycÄ±","41192011504",new Date(2000,6,28));
-		Customer fakeCustomer = new Customer(2,"Engin","DemiroÄŸ","12345678901",new Date(1989,2,11));
+		Customer realCustomer = new Customer(1,"Halit Enes","Kalaycı","41192011504",new Date(2000,6,28));
+		Customer fakeCustomer = new Customer(2,"Engin","Demiroğ","12345678901",new Date(1989,2,11));
 		
 		BaseCustomerManager neroCustomerManager = new NeroCustomerManager(new CustomerCheckManager());
 		neroCustomerManager.save(realCustomer);
