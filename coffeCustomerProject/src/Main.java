@@ -13,7 +13,6 @@ public class Main {
 	public static void main(String[] args) {
 		Customer realCustomer = new Customer(1,"Halit Enes","Kalaycý","41192011504",new Date(2000,6,28));
 		Customer fakeCustomer = new Customer(2,"Engin","Demiroð","12345678901",new Date(1989,2,11));
-		
 		BaseCustomerManager neroCustomerManager = new NeroCustomerManager(new CustomerCheckManager());
 		neroCustomerManager.save(realCustomer);
 		
