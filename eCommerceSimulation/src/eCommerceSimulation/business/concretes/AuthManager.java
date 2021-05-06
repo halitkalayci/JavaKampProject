@@ -26,39 +26,39 @@ public class AuthManager implements AuthService{
 		User userToRegister = new User(id,email,password,firstName,lastName,false);
 		
 		if(!userValidationService.validate(userToRegister)) {
-			System.out.println("Validasyon işlemi başarısız. Lütfen tüm alanları doğru girdiğinizden emin olunuz.");
+			System.out.println("Validasyon iÅŸlemi baÅŸarÄ±sÄ±z. LÃ¼tfen tÃ¼m alanlarÄ± doÄŸru girdiÄŸinizden emin olunuz.");
 			return;
 		}
 		
 		if(!BusinessRules.run(checkIfUserExists(email))) {
-			System.out.println("Kayıt olma işlemi başarısız. Bu email ile bir başka üye mevcut.");
+			System.out.println("KayÄ±t olma iÅŸlemi baÅŸarÄ±sÄ±z. Bu email ile bir baÅŸka Ã¼ye mevcut.");
 			return;
 		}
 		
-		System.out.println("Başarıyla kayıt olundu. Üyeliğinizi doğrulamak için lütfen e-posta adresinizi kontrol ediniz.");
-		emailService.send("Deneme doğrulama mesajıdır. Doğrulamak için kodlama.io/dogrula?id=xyz&token=abc adresine gidin.", userToRegister.getEmail());
+		System.out.println("BaÅŸarÄ±yla kayÄ±t olundu. ÃœyeliÄŸinizi doÄŸrulamak iÃ§in lÃ¼tfen e-posta adresinizi kontrol ediniz.");
+		emailService.send("Deneme doÄŸrulama mesajÄ±dÄ±r. DoÄŸrulamak iÃ§in kodlama.io/dogrula?id=xyz&token=abc adresine gidin.", userToRegister.getEmail());
 		userService.add(userToRegister);
 	}
 
 	@Override
 	public void login(String email, String password) {
 		if(!BusinessRules.run(checkIfAllFieldsFilled(email, password))) {
-			System.out.println("Giriş başarısız. Inputlar doğru doldurulmadı.");
+			System.out.println("GiriÅŸ baÅŸarÄ±sÄ±z. Inputlar doÄŸru doldurulmadÄ±.");
 			return;
 		}
 		
 		User userToLogin = userService.getByEmailAndPassword(email, password);
 		
 		if(userToLogin == null) {
-			System.out.println("Giriş başarısız. E-posta adresiniz veya şifreniz yanlış.");
+			System.out.println("GiriÅŸ baÅŸarÄ±sÄ±z. E-posta adresiniz veya ÅŸifreniz yanlÄ±ÅŸ.");
 			return;
 		}
 		
 		if(!checkIfUserVerified(userToLogin)) {
-			System.out.println("Giriş başarısız. Üyeliğinizi doğrulamamışsınız.");
+			System.out.println("GiriÅŸ baÅŸarÄ±sÄ±z. ÃœyeliÄŸinizi doÄŸrulamadÄ±nÄ±z.");
 			return;
 		}
-		System.out.println("Giriş başarılı. Hoşgeldiniz " + userToLogin.getFirstName() + " " + userToLogin.getLastName());
+		System.out.println("GiriÅŸ baÅŸarÄ±lÄ±. HoÅŸgeldiniz : " + userToLogin.getFirstName() + " " + userToLogin.getLastName());
 	}
 	
 	

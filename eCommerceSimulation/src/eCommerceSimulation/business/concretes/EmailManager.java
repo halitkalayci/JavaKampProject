@@ -6,7 +6,7 @@ public class EmailManager implements EmailService{
 
 	@Override
 	public void send(String message, String to) {
-		System.out.println("E-posta Manager : " + message + " mesajı " + to + " adresine gönderildi.");
+		System.out.println("E-posta Manager : " + message + " mesajÄ± " + to + " adresine gÃ¶nderildi.");
 	}
 
 }

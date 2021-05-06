@@ -63,7 +63,7 @@ public class UserManager implements UserService{
 	public void verifyUser(int id) {
 		User user = userDao.get(id);
 		user.setVerified(true);
-		System.out.println("Kullanıcı başarıyla doğrulandı..");
+		System.out.println("KullanÄ±cÄ± baÅŸarÄ±yla doÄŸrulandÄ±..");
 	}
  
 }
