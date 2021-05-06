@@ -23,7 +23,7 @@ public class Main {
 		authService.register(5, "halitenes.kalayci@gmail.com", "123halit1234", "Halit Enes", "Kalaycý"); // Baþarýsýz e-posta mevcut
 
 		authService.login("halitenes.kalayci@gmail.com", "123halit1234"); // Baþarýsýz üye doðrulama yapmamýþ.
-		userService.verifyUser(userService.getByEmail("halitenes.kalayci@gmail.com")); // Kullanýcýyý doðrulayalým.
+		userService.verifyUser(1); // Kullanýcýyý doðrulayalým.
 		authService.login("halitenes.kalayci@gmail.com", "123halit123"); // Baþarýsýz þifre yanlýþ.
 		authService.login("halitenes.kalayci@gmail.com", "123halit1234"); // Baþarýlý.
 		authService.login("", ""); // Baþarýsýz e-posta parola zorunlu

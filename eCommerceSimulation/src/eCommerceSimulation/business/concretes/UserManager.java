@@ -60,9 +60,10 @@ public class UserManager implements UserService{
 
 
 	@Override
-	public void verifyUser(User user) {
-		System.out.println("Kullanýcý baþarýyla doðrulandý..");
+	public void verifyUser(int id) {
+		User user = userDao.get(id);
 		user.setVerified(true);
+		System.out.println("Kullanýcý baþarýyla doðrulandý..");
 	}
  
 }
